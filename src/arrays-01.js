@@ -24,118 +24,135 @@
  * ? example: [1, 2, 3, 4, 5] => 1
  */
 function getFirstValue(arr) {
-  // write your code here & return value
+  if (arr.length > 0) {
+    return arr[0];
+  }
+  return undefined;
 }
 
 /**
- * Returns a new array with 4 elements
- * @param {*} a - 0th element of the array
- * @param {*} b - 1st element of the array
- * @param {*} c - 2nd element of the array
- * @param {*} d - 3rd element of the array
- * @returns {array} - array of the 4 elements
- */
+   * Returns a new array with 4 elements
+   * @param {*} a - 0th element of the array
+   * @param {*} b - 1st element of the array
+   * @param {*} c - 2nd element of the array
+   * @param {*} d - 3rd element of the array
+   * @returns {array} - array of the 4 elements
+   */
 function makeArray(a, b, c, d) {
-  // write your code here & return value
+  return [a, b, c, d];
 }
 
 /**
- * Creates a new array of the first 5 prime numbers
- * @returns {array} array of the first 5 prime numbers
- * starting at 2
- * ? hint: use an array literal
- *
- */
+   * Creates a new array of the first 5 prime numbers
+   * @returns {array} array of the first 5 prime numbers
+   * starting at 2
+   * ? hint: use an array literal
+   *
+   */
 function createFirstFivePrimes() {
-  // write your code here & return value
+  const primes = [2, 3, 5, 7, 11];
+  return primes;
 }
 /**
- * Creates a new array with a number of elements
- * @param {number} size - number of elements in the array
- * @returns {array} - new array with the specified number of elements
- * ? create an array of numbers from 0 to size - 1
- * ? example: size = 3 => [0, 1, 2]
- * ? must use a for loop
- */
+   * Creates a new array with a number of elements
+   * @param {number} size - number of elements in the array
+   * @returns {array} - new array with the specified number of elements
+   * ? create an array of numbers from 0 to size - 1
+   * ? example: size = 3 => [0, 1, 2]
+   * ? must use a for loop
+   */
 function createSizedArray(size) {
-  // write your code here & return value
+  const newArray = [];
+  for (let i = 0; i < size; i += 1) {
+    newArray.push(i);
+  }
+  return newArray;
 }
 
+let x = 5;
+x += 1;
+
 /**
- * Modifies the array by adding the number 1
- * both to the front and the back of the array
- * @param {array} arr - array to be modified
- * @returns modified array
- */
+   * Modifies the array by adding the number 1
+   * both to the front and the back of the array
+   * @param {array} arr - array to be modified
+   * @returns modified array
+   */
 function modifyArrayByAdding(arr) {
-  // write your code here & return value
+  arr.unshift(1);
+  arr.push(1);
+  return arr;
 }
 
 /**
- * Modifies the array by deleting the beginning and end elements
- * @param {array} arr - the array to modify
- * @returns {array} - the modified array
- * ? example: [1, 2, 3, 4, 5] => [2, 3, 4]
- */
+   * Modifies the array by deleting the beginning and end elements
+   * @param {array} arr - the array to modify
+   * @returns {array} - the modified array
+   * ? example: [1, 2, 3, 4, 5] => [2, 3, 4]
+   */
 function modifyArrayByDeleting(arr) {
-  // write your code here & return value
+  arr.shift();
+  arr.pop();
+  return arr;
 }
 
 /**
- * Finds and returns the element in the array at a particular index
- * @param {array} arr - the passed in array
- * @param {number} index - the index at which to find the element
- * @returns {*} - the element at the specified index
- * ? example: [1, 2, 3, 4, 5], index = 2 => 3
- */
+   * Finds and returns the element in the array at a particular index
+   * @param {array} arr - the passed in array
+   * @param {number} index - the index at which to find the element
+   * @returns {*} - the element at the specified index
+   * ? example: [1, 2, 3, 4, 5], index = 2 => 3
+   */
 function findElementAtIndex(arr, index) {
-  // write your code here & return value
+  return arr[index];
 }
 
 /**
- * Finds the first index of an element in an array
- * @param {array} arr - the array
- * @returns {number} - integer index of the first occurrence of the element
- * ? example: [1, 2, 3, 4, 5], value = 3 => 2
- * ? example: [1, 2, 3, 4, 5], value = 6 => -1
- * ? hint: https://bit.ly/2ZyFaAj - Array Searching and Sorting Methods
- */
+   * Finds the first index of an element in an array
+   * @param {array} arr - the array
+   * @returns {number} - integer index of the first occurrence of the element
+   * ? example: [1, 2, 3, 4, 5], value = 3 => 2
+   * ? example: [1, 2, 3, 4, 5], value = 6 => -1
+   * ? hint: https://bit.ly/2ZyFaAj - Array Searching and Sorting Methods
+   */
 function findElementByValue(arr, value) {
-  // write your code here & return value
+  const index = arr.indexOf(value);
+  return index;
 }
 
 /**
- * Modifies the array replacing a value at index with a new value
- * @param {array} arr - the passed in array
- * @param {number} index - the index at which to find the element
- * @param {*} value - the value to be swapped
- * @returns {array} - the modified array
- * ? example: [1, 2, 3, 4, 5], index = 2, value = 0 => [1, 2, 0, 4, 5]
- */
+   * Modifies the array replacing a value at index with a new value
+   * @param {array} arr - the passed in array
+   * @param {number} index - the index at which to find the element
+   * @param {*} value - the value to be swapped
+   * @returns {array} - the modified array
+   * ? example: [1, 2, 3, 4, 5], index = 2, value = 0 => [1, 2, 0, 4, 5]
+   */
 function changeElementAtIndex(arr, index, value) {
-  // write your code here & return value
+  arr[index] = value;
+  return arr;
 }
 
 /**
- * Creates a string from an array of letters
- * @param {array} arr - array to use
- * @returns {string} - made from array elements
- * ? example: ['a', 'b', 'c'] => 'abc'
- * ? https://mzl.la/3ib7Dm3
- */
+   * Creates a string from an array of letters
+   * @param {array} arr - array to use
+   * @returns {string} - made from array elements
+   * ? example: ['a', 'b', 'c'] => 'abc'
+   * ? https://mzl.la/3ib7Dm3
+   */
 function makeStringFromArray(arr) {
-  // write your code here & return value
+  return arr.join('');
 }
 
 /**
- * Create a shallow copy of an array
- * @param {array} arr - array to be cloned
- * @returns {array} - a new array with the same elements as the passed in array
- * ? example: [1, 2, 3, 4, 5] => [1, 2, 3, 4, 5]
- * ? https://bit.ly/39ASLc0 - The spread operator
- */
+   * Create a shallow copy of an array
+   * @param {array} arr - array to be cloned
+   * @returns {array} - a new array with the same elements as the passed in array
+   * ? example: [1, 2, 3, 4, 5] => [1, 2, 3, 4, 5]
+   * ? https://bit.ly/39ASLc0 - The spread operator
+   */
 function createShallowCopy(arr) {
-  // write your code here & return value
+  return [...arr];
 }
 
 module.exports = {
